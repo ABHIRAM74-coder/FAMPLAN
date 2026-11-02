@@ -9,7 +9,7 @@
 :root {
   font-family: "Inter", Arial, sans-serif;
   color: #110d29;
-  background: #ffffff;
+   background: #FDFCFF;
 }
 
 * {
@@ -29,7 +29,7 @@ body,
 
 body {
   margin: 0;
-  background: #ffffff;
+   background: #FDFCFF;
 }
 
 a {
@@ -618,7 +618,7 @@ em {
 .lime,
 .blue,
 .yellow {
-  background: #fff5dc;
+  background: rgba(253, 255, 148, 0.2);
 }
 
 
