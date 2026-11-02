@@ -36,6 +36,10 @@ import reminder from "./assets/reminder.png";
 import utilities from "./assets/utilities.png";
 
 
+/* =========================================================
+   DATA
+========================================================= */
+
 const features = [
   {
     name: "Documents",
@@ -160,6 +164,10 @@ const questions = [
 ];
 
 
+/* =========================================================
+   BRAND
+========================================================= */
+
 function Brand() {
   return (
     <a href="#home" className="brand">
@@ -181,6 +189,10 @@ function Brand() {
 }
 
 
+/* =========================================================
+   HEADER
+========================================================= */
+
 function Header() {
   const [open, setOpen] = useState(false);
 
@@ -194,9 +206,13 @@ function Header() {
 
   return (
     <header className="header">
+
       <div className="container nav">
 
         <Brand />
+
+
+        {/* DESKTOP NAVIGATION */}
 
         <nav
           className={
@@ -216,10 +232,14 @@ function Header() {
           ))}
         </nav>
 
+
+        {/* DESKTOP BUTTONS */}
+
         <div className="nav-actions">
+
           <a
             className="outline-btn"
-            href="#cta"
+            href="#login"
           >
             Log In
           </a>
@@ -230,24 +250,45 @@ function Header() {
           >
             Get Early Access
           </a>
+
         </div>
 
-        <button
-          className="menu-toggle"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X /> : <Menu />}
-        </button>
+
+        {/* MOBILE HEADER */}
+
+        <div className="mobile-header-actions">
+
+          <a
+            className="mobile-header-login"
+            href="#login"
+          >
+            Log In
+          </a>
+
+          <button
+            className="menu-toggle"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <X /> : <Menu />}
+          </button>
+
+        </div>
 
       </div>
+
     </header>
   );
 }
 
 
+/* =========================================================
+   HERO
+========================================================= */
+
 function Hero() {
+
   const floatingItems = [
     [FileText, "Documents"],
     [ShieldCheck, "Insurance"],
@@ -261,6 +302,7 @@ function Hero() {
       className="hero"
       id="home"
     >
+
       <div className="container hero-grid">
 
         <div className="hero-copy">
@@ -269,6 +311,7 @@ function Hero() {
             Your Family, Well Organized
           </span>
 
+
           <h1>
             The <em>Smart</em> Family
             <br className="desktop-break" />
@@ -276,22 +319,57 @@ function Hero() {
             Life Management App
           </h1>
 
+
           <p>
             Bring your family’s important documents,
             finances, assets, reminders and everyday
             tasks into one secure, easy-to-use space.
           </p>
 
+
           <div className="hero-actions">
 
+            {/* DESKTOP ONLY */}
+
             <a
-              className="primary-btn"
+              className="primary-btn hero-early-access"
               href="#cta"
             >
               Get Early Access
 
               <ArrowRight size={17} />
             </a>
+
+
+            {/* MOBILE ONLY */}
+
+            <div className="mobile-auth-buttons">
+
+              <a
+                className="mobile-signup-btn"
+                href="#signup"
+              >
+                Get Started
+
+               <span
+  style={{
+    color: "#ffffff",
+    fontSize: "27px",
+    fontWeight: "400",
+    lineHeight: "1",
+    display: "inline-flex",
+    alignItems: "center",
+    marginLeft: "14px"
+  }}
+  aria-hidden="true"
+>
+  ›
+</span>
+
+              </a>
+
+            </div>
+
 
             <a
               className="video-link"
@@ -303,6 +381,7 @@ function Hero() {
             </a>
 
           </div>
+
 
           <div className="trust-row">
 
@@ -322,6 +401,7 @@ function Hero() {
             </span>
 
           </div>
+
         </div>
 
 
@@ -332,10 +412,12 @@ function Hero() {
             alt="Family using FamilyKit"
           />
 
+
           <div className="floating-list">
 
             {floatingItems.map(
               ([Icon, title]) => (
+
                 <div key={title}>
 
                   <Icon size={23} />
@@ -343,6 +425,7 @@ function Hero() {
                   <b>{title}</b>
 
                 </div>
+
               )
             )}
 
@@ -351,10 +434,15 @@ function Hero() {
         </div>
 
       </div>
+
     </section>
   );
 }
 
+
+/* =========================================================
+   PROBLEM
+========================================================= */
 
 function Problem() {
   return (
@@ -366,6 +454,7 @@ function Problem() {
           src={problem}
           alt="Family managing important tasks"
         />
+
 
         <div>
 
@@ -395,6 +484,10 @@ function Problem() {
   );
 }
 
+
+/* =========================================================
+   SOLUTION
+========================================================= */
 
 function Solution() {
   return (
@@ -442,6 +535,7 @@ function Solution() {
               <p>{desc}</p>
 
             </article>
+
           )
         )}
 
@@ -451,6 +545,10 @@ function Solution() {
   );
 }
 
+
+/* =========================================================
+   FEATURES
+========================================================= */
 
 function Features() {
   return (
@@ -464,6 +562,7 @@ function Features() {
         {" "}
         <em>Organised</em>
       </h2>
+
 
       <div className="feature-grid">
 
@@ -490,6 +589,7 @@ function Features() {
               <p>{desc}</p>
 
             </article>
+
           )
         )}
 
@@ -499,6 +599,10 @@ function Features() {
   );
 }
 
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
 
 function How() {
   return (
@@ -540,15 +644,20 @@ function How() {
                     <Icon />
                   </span>
 
+
                   <div>
 
                     <span className="step-number">
                       {i + 1}
                     </span>
 
-                    <h3>{title}</h3>
+                    <h3>
+                      {title}
+                    </h3>
 
-                    <p>{desc}</p>
+                    <p>
+                      {desc}
+                    </p>
 
                   </div>
 
@@ -560,6 +669,7 @@ function How() {
                 )}
 
               </React.Fragment>
+
             )
           )}
 
@@ -572,7 +682,12 @@ function How() {
 }
 
 
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
 function Dashboard() {
+
   const points = [
     "Quick access to everything",
     "Upcoming renewals and payments",
@@ -614,9 +729,11 @@ function Dashboard() {
             so you always know what’s next.
           </p>
 
+
           <ul className="check-list">
 
             {points.map((point) => (
+
               <li key={point}>
 
                 <CheckCircle2 />
@@ -624,6 +741,7 @@ function Dashboard() {
                 {point}
 
               </li>
+
             ))}
 
           </ul>
@@ -637,7 +755,12 @@ function Dashboard() {
 }
 
 
+/* =========================================================
+   EXTRAS
+========================================================= */
+
 function Extras() {
+
   const reminderItems = [
     "Insurance renewals",
     "EMIs and bill payments",
@@ -645,12 +768,14 @@ function Extras() {
     "Health checkups and vaccinations"
   ];
 
+
   const utilityItems = [
     "EMI calculator",
     "Insurance premium calculator",
     "Document checklist",
     "Renewal and expiry tracker"
   ];
+
 
   const cards = [
     {
@@ -672,6 +797,7 @@ function Extras() {
     }
   ];
 
+
   return (
     <section className="extras container">
 
@@ -685,9 +811,7 @@ function Extras() {
           <div className="extra-text">
 
             <span
-              className={
-                `extra-icon ${card.iconClass}`
-              }
+              className={`extra-icon ${card.iconClass}`}
             >
               <card.Icon />
             </span>
@@ -695,9 +819,14 @@ function Extras() {
 
             <div>
 
-              <h2>{card.title}</h2>
+              <h2>
+                {card.title}
+              </h2>
 
-              <p>{card.subtitle}</p>
+              <p>
+                {card.subtitle}
+              </p>
+
 
               <ul className="check-list">
 
@@ -711,6 +840,7 @@ function Extras() {
                       {item}
 
                     </li>
+
                   )
                 )}
 
@@ -727,6 +857,7 @@ function Extras() {
           />
 
         </article>
+
       ))}
 
     </section>
@@ -734,7 +865,12 @@ function Extras() {
 }
 
 
+/* =========================================================
+   SECURITY
+========================================================= */
+
 function Security() {
+
   const items = [
     {
       Icon: LockKeyhole,
@@ -761,6 +897,7 @@ function Security() {
         "You decide who can access family information."
     }
   ];
+
 
   return (
     <section
@@ -796,11 +933,16 @@ function Security() {
 
                 <Icon />
 
-                <h3>{title}</h3>
+                <h3>
+                  {title}
+                </h3>
 
-                <p>{desc}</p>
+                <p>
+                  {desc}
+                </p>
 
               </article>
+
             )
           )}
 
@@ -813,9 +955,15 @@ function Security() {
 }
 
 
+/* =========================================================
+   FAQ
+========================================================= */
+
 function FAQ() {
+
   const [active, setActive] =
     useState(-1);
+
 
   return (
     <section
@@ -856,9 +1004,7 @@ function FAQ() {
                       : i
                   )
                 }
-                aria-expanded={
-                  active === i
-                }
+                aria-expanded={active === i}
               >
 
                 {question}
@@ -875,10 +1021,13 @@ function FAQ() {
 
 
               {active === i && (
-                <p>{answer}</p>
+                <p>
+                  {answer}
+                </p>
               )}
 
             </article>
+
           )
         )}
 
@@ -889,7 +1038,12 @@ function FAQ() {
 }
 
 
+/* =========================================================
+   FOOTER + CTA
+========================================================= */
+
 function Footer() {
+
   return (
     <>
 
@@ -986,9 +1140,15 @@ function Footer() {
 }
 
 
+/* =========================================================
+   MAIN APPLICATION
+========================================================= */
+
 export default function App() {
+
   return (
     <>
+
       <Header />
 
       <main>
@@ -1014,6 +1174,7 @@ export default function App() {
         <Footer />
 
       </main>
+
     </>
   );
 }
