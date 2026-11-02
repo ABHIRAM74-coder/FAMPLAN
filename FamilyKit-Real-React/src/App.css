@@ -731,13 +731,15 @@ em {
 
 
 .wheel-center img {
-  width: 290px;
+  width: 265px;
+  height: 265px;
 
-  height: 260px;
+  object-fit: cover;
+  object-position: center;
 
-  object-fit: contain;
+  border-radius: 50%;
 
-  object-position: center bottom;
+  display: block;
 }
 
 
@@ -935,7 +937,6 @@ em {
 @media (hover: hover) {
 
   .feature-circle:hover {
-    background: #FDFCFF;
 
     transform: scale(1.055);
 
@@ -961,6 +962,7 @@ em {
 /* DOCUMENTS */
 
 .feature-circle-1 {
+  background: #F0F6FB;
   left: 50%;
 
   top: 0;
@@ -972,6 +974,7 @@ em {
 /* INSURANCE */
 
 .feature-circle-2 {
+  background: #EFF9FA;
   right: 50px;
 
   top: 80px;
@@ -981,6 +984,7 @@ em {
 /* FINANCE */
 
 .feature-circle-3 {
+  background: #EFF0FB;
   right: 0;
 
   top: 255px;
@@ -990,6 +994,7 @@ em {
 /* PROPERTY */
 
 .feature-circle-4 {
+  background: #F7EFFB;
   right: 55px;
 
   bottom: 70px;
@@ -999,6 +1004,7 @@ em {
 /* HEALTH */
 
 .feature-circle-5 {
+  background: #FAEFF6;
   left: 50%;
 
   bottom: 0;
@@ -1010,6 +1016,7 @@ em {
 /* HOUSEHOLD */
 
 .feature-circle-6 {
+  background: #FAF7F0;
   left: 55px;
 
   bottom: 70px;
@@ -1019,6 +1026,7 @@ em {
 /* EDUCATION */
 
 .feature-circle-7 {
+  background: #F1F9F0;
   left: 0;
 
   top: 255px;
@@ -1028,6 +1036,7 @@ em {
 /* TO DO LISTS */
 
 .feature-circle-8 {
+  background: #F1ECFB;
   left: 50px;
 
   top: 80px;
@@ -2305,19 +2314,21 @@ em {
 
 
   .wheel-family-glow {
-    width: 185px;
+    width: 155px;
+    height: 155px;
 
-    height: 185px;
-
-    background:
-      rgba(253, 255, 148, 0.55);
+    background: rgba(253, 255, 148, 0.55);
   }
 
 
   .wheel-center img {
-    width: 205px;
+    width: 155px;
+    height: 155px;
 
-    height: 180px;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
   }
 
 
@@ -2903,16 +2914,19 @@ em {
 
 
   .wheel-family-glow {
-    width: 165px;
-
-    height: 165px;
+    width: 140px;
+    height: 140px;
   }
 
 
   .wheel-center img {
-    width: 180px;
+    width: 140px;
+    height: 140px;
 
-    height: 160px;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
   }
 
 
@@ -3018,4 +3032,315 @@ em {
       rotate(315deg);
   }
 
+}
+
+
+/* =========================================================
+   MOBILE FAMILY WHEEL — COMPACT VERSION
+   Added only for mobile screens.
+   Desktop/tablet rules above remain unchanged.
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Reduce overall mobile wheel height slightly */
+  .family-wheel {
+    width: 100%;
+    height: 455px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* Smaller central wheel */
+  .wheel-center {
+    width: 135px;
+    height: 135px;
+  }
+
+  .wheel-family-glow {
+    width: 135px;
+    height: 135px;
+    background: rgba(253, 255, 148, 0.55);
+  }
+
+  .wheel-center img {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  /* Smaller 8 surrounding feature circles */
+  .feature-circle {
+    width: 88px;
+    height: 88px;
+    padding: 7px;
+  }
+
+  .feature-circle-icon {
+    width: 21px;
+    height: 21px;
+    margin-bottom: 3px;
+  }
+
+  .feature-circle h3 {
+    font-size: 11px;
+    line-height: 1.05;
+    margin-bottom: 2px;
+  }
+
+  .feature-circle p {
+    max-width: 72px;
+    font-size: 6.8px;
+    line-height: 1.18;
+  }
+
+  /* Reposition all 8 circles around the smaller center */
+
+  .feature-circle-1 {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .feature-circle-2 {
+    right: 18px;
+    top: 54px;
+  }
+
+  .feature-circle-3 {
+    right: 0;
+    top: 183px;
+  }
+
+  .feature-circle-4 {
+    right: 20px;
+    bottom: 48px;
+  }
+
+  .feature-circle-5 {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+
+  .feature-circle-6 {
+    left: 20px;
+    bottom: 48px;
+  }
+
+  .feature-circle-7 {
+    left: 0;
+    top: 183px;
+  }
+
+  .feature-circle-8 {
+    left: 18px;
+    top: 54px;
+  }
+
+  /* Connector lines shortened for compact mobile wheel */
+
+  .wheel-line {
+    width: 66px;
+    height: 2px;
+  }
+
+  .line-right {
+    transform:
+      translate(67px, -1px)
+      rotate(0deg);
+  }
+
+  .line-bottom-right {
+    transform:
+      translate(51px, 51px)
+      rotate(45deg);
+  }
+
+  .line-bottom {
+    transform:
+      translate(0, 68px)
+      rotate(90deg);
+  }
+
+  .line-bottom-left {
+    transform:
+      translate(-51px, 51px)
+      rotate(135deg);
+  }
+
+  .line-left {
+    transform:
+      translate(-67px, -1px)
+      rotate(180deg);
+  }
+
+  .line-top-left {
+    transform:
+      translate(-51px, -51px)
+      rotate(225deg);
+  }
+
+  .line-top {
+    transform:
+      translate(0, -68px)
+      rotate(270deg);
+  }
+
+  .line-top-right {
+    transform:
+      translate(51px, -51px)
+      rotate(315deg);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE FAMILY WHEEL — COMPACT VERSION
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .family-wheel {
+    height: 420px;
+    max-width: 335px;
+  }
+
+  .feature-circle {
+    width: 82px;
+    height: 82px;
+    padding: 6px;
+  }
+
+  .feature-circle-icon {
+    width: 19px;
+    height: 19px;
+    margin-bottom: 2px;
+  }
+
+  .feature-circle h3 {
+    font-size: 10px;
+    line-height: 1.05;
+    margin-bottom: 2px;
+  }
+
+  .feature-circle p {
+    max-width: 68px;
+    font-size: 6.3px;
+    line-height: 1.15;
+  }
+
+  .wheel-center {
+    width: 125px;
+    height: 125px;
+  }
+
+  .wheel-family-glow {
+    width: 125px;
+    height: 125px;
+  }
+
+  .wheel-center img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  .feature-circle-1 {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .feature-circle-2 {
+    right: 12px;
+    top: 49px;
+  }
+
+  .feature-circle-3 {
+    right: 0;
+    top: 169px;
+  }
+
+  .feature-circle-4 {
+    right: 15px;
+    bottom: 43px;
+  }
+
+  .feature-circle-5 {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+
+  .feature-circle-6 {
+    left: 15px;
+    bottom: 43px;
+  }
+
+  .feature-circle-7 {
+    left: 0;
+    top: 169px;
+  }
+
+  .feature-circle-8 {
+    left: 12px;
+    top: 49px;
+  }
+
+  .wheel-line {
+    width: 60px;
+  }
+
+  .line-right {
+    transform:
+      translate(62px, -1px)
+      rotate(0deg);
+  }
+
+  .line-bottom-right {
+    transform:
+      translate(47px, 47px)
+      rotate(45deg);
+  }
+
+  .line-bottom {
+    transform:
+      translate(0, 63px)
+      rotate(90deg);
+  }
+
+  .line-bottom-left {
+    transform:
+      translate(-47px, 47px)
+      rotate(135deg);
+  }
+
+  .line-left {
+    transform:
+      translate(-62px, -1px)
+      rotate(180deg);
+  }
+
+  .line-top-left {
+    transform:
+      translate(-47px, -47px)
+      rotate(225deg);
+  }
+
+  .line-top {
+    transform:
+      translate(0, -63px)
+      rotate(270deg);
+  }
+
+  .line-top-right {
+    transform:
+      translate(47px, -47px)
+      rotate(315deg);
+  }
 }
