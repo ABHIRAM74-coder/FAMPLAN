@@ -3344,3 +3344,14 @@ em {
       rotate(315deg);
   }
 }
+
+
+/* =========================================================
+   CENTRAL FAMILY CIRCLE — YELLOW BACKGROUND
+   Everything else remains unchanged.
+========================================================= */
+
+.wheel-center {
+  background: #FDFF94;
+  border-radius: 50%;
+}

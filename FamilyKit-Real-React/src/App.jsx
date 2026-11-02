@@ -737,7 +737,7 @@ function Features() {
 
                 <Icon
                   className="feature-circle-icon"
-                  strokeWidth={2.2}
+                  strokeWidth={3}
                 />
 
                 <h3>
