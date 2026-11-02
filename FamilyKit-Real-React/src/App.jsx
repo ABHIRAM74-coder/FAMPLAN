@@ -34,63 +34,77 @@ import problem from "./assets/problem.png";
 import dashboard from "./assets/dashboard.png";
 import reminder from "./assets/reminder.png";
 import utilities from "./assets/utilities.png";
+import documentsImage from "./assets/Documents.jpeg";
 
 
 /* =========================================================
-   DATA
+   FEATURE DATA
+   Used for the new circular family feature section
 ========================================================= */
 
 const features = [
   {
     name: "Documents",
-    desc: "ID cards, certificates, records and more",
+    desc: "IDs, certificates and records",
     Icon: FileText,
-    color: "#7423c9"
+    color: "#3498c8",
+    rgb: "52, 152, 200"
   },
   {
     name: "Insurance",
     desc: "Policies, renewals and claims",
     Icon: ShieldCheck,
-    color: "#39bd4e"
+    color: "#22a89b",
+    rgb: "34, 168, 155"
   },
   {
-    name: "Finances",
-    desc: "Loans, EMIs, taxes and investments",
+    name: "Finance",
+    desc: "Loans, EMIs & Investments",
     Icon: Coins,
-    color: "#e8ad0c"
+    color: "#3857c8",
+    rgb: "56, 87, 200"
   },
   {
-    name: "Assets",
-    desc: "Home, vehicle, valuables and warranties",
+    name: "Property",
+    desc: "Home, Vehicles & Valuables",
     Icon: House,
-    color: "#7823c9"
+    color: "#a52bc3",
+    rgb: "165, 43, 195"
   },
   {
     name: "Health",
-    desc: "Medical records, reports and prescriptions",
+    desc: "Records & Prescriptions",
     Icon: HeartPulse,
-    color: "#e34e8c"
+    color: "#d52e86",
+    rgb: "213, 46, 134"
   },
   {
     name: "Household",
-    desc: "Bills, subscriptions and service contracts",
+    desc: "Bills & Service Contracts",
     Icon: ShoppingBasket,
-    color: "#cf9a13"
+    color: "#b99725",
+    rgb: "185, 151, 37"
   },
   {
     name: "Education",
-    desc: "School records and certificates",
+    desc: "School & Learning records",
     Icon: GraduationCap,
-    color: "#7432b6"
+    color: "#43bc39",
+    rgb: "67, 188, 57"
   },
   {
-    name: "Family Tasks",
-    desc: "Shared to-dos and responsibilities",
+    name: "To do Lists",
+    desc: "Shared to-do's and responsibilities",
     Icon: ClipboardCheck,
-    color: "#d5a40c"
+    color: "#7634bd",
+    rgb: "118, 52, 189"
   }
 ];
 
+
+/* =========================================================
+   SOLUTION CARD DATA
+========================================================= */
 
 const benefits = [
   {
@@ -120,6 +134,10 @@ const benefits = [
 ];
 
 
+/* =========================================================
+   HOW IT WORKS DATA
+========================================================= */
+
 const steps = [
   {
     title: "Create Your Family Account",
@@ -143,6 +161,10 @@ const steps = [
   }
 ];
 
+
+/* =========================================================
+   FAQ DATA
+========================================================= */
 
 const questions = [
   [
@@ -171,7 +193,9 @@ const questions = [
 function Brand() {
   return (
     <a href="#home" className="brand">
+
       <span className="brand-icon">
+
         <House
           size={23}
           strokeWidth={3}
@@ -181,9 +205,13 @@ function Brand() {
           size={12}
           className="brand-people"
         />
+
       </span>
 
-      <span>FamilyKit</span>
+      <span>
+        FamilyKit
+      </span>
+
     </a>
   );
 }
@@ -212,7 +240,9 @@ function Header() {
         <Brand />
 
 
-        {/* DESKTOP NAVIGATION */}
+        {/* =================================================
+            DESKTOP NAVIGATION
+        ================================================= */}
 
         <nav
           className={
@@ -221,7 +251,9 @@ function Header() {
               : "navlinks"
           }
         >
+
           {links.map(([name, href]) => (
+
             <a
               key={name}
               href={href}
@@ -229,11 +261,15 @@ function Header() {
             >
               {name}
             </a>
+
           ))}
+
         </nav>
 
 
-        {/* DESKTOP BUTTONS */}
+        {/* =================================================
+            DESKTOP LOGIN / EARLY ACCESS
+        ================================================= */}
 
         <div className="nav-actions">
 
@@ -254,7 +290,9 @@ function Header() {
         </div>
 
 
-        {/* MOBILE HEADER */}
+        {/* =================================================
+            MOBILE LOGIN + MENU
+        ================================================= */}
 
         <div className="mobile-header-actions">
 
@@ -271,7 +309,9 @@ function Header() {
             aria-expanded={open}
             onClick={() => setOpen(!open)}
           >
+
             {open ? <X /> : <Menu />}
+
           </button>
 
         </div>
@@ -305,6 +345,11 @@ function Hero() {
 
       <div className="container hero-grid">
 
+
+        {/* =================================================
+            HERO LEFT SIDE
+        ================================================= */}
+
         <div className="hero-copy">
 
           <span className="eyebrow">
@@ -329,7 +374,8 @@ function Hero() {
 
           <div className="hero-actions">
 
-            {/* DESKTOP ONLY */}
+
+            {/* DESKTOP BUTTON */}
 
             <a
               className="primary-btn hero-early-access"
@@ -341,7 +387,9 @@ function Hero() {
             </a>
 
 
-            {/* MOBILE ONLY */}
+            {/* =================================================
+                MOBILE GET STARTED BUTTON
+            ================================================= */}
 
             <div className="mobile-auth-buttons">
 
@@ -349,39 +397,51 @@ function Hero() {
                 className="mobile-signup-btn"
                 href="#signup"
               >
+
                 Get Started
 
-               <span
-  style={{
-    color: "#ffffff",
-    fontSize: "27px",
-    fontWeight: "400",
-    lineHeight: "1",
-    display: "inline-flex",
-    alignItems: "center",
-    marginLeft: "14px"
-  }}
-  aria-hidden="true"
->
-  ›
-</span>
+
+                {/* WHITE THIN CHEVRON ARROW */}
+
+                <span
+                  style={{
+                    color: "#ffffff",
+                    fontSize: "27px",
+                    fontWeight: "400",
+                    lineHeight: "1",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    marginLeft: "14px"
+                  }}
+                  aria-hidden="true"
+                >
+                  ›
+                </span>
 
               </a>
 
             </div>
 
 
+            {/* VIDEO LINK */}
+
             <a
               className="video-link"
               href="#how"
             >
+
               <PlayCircle size={30} />
 
               Watch 2-minute Overview
+
             </a>
 
           </div>
 
+
+          {/* =================================================
+              TRUST ITEMS
+          ================================================= */}
 
           <div className="trust-row">
 
@@ -405,6 +465,10 @@ function Hero() {
         </div>
 
 
+        {/* =================================================
+            HERO RIGHT IMAGE
+        ================================================= */}
+
         <div className="hero-art">
 
           <img
@@ -415,19 +479,19 @@ function Hero() {
 
           <div className="floating-list">
 
-            {floatingItems.map(
-              ([Icon, title]) => (
+            {floatingItems.map(([Icon, title]) => (
 
-                <div key={title}>
+              <div key={title}>
 
-                  <Icon size={23} />
+                <Icon size={23} />
 
-                  <b>{title}</b>
+                <b>
+                  {title}
+                </b>
 
-                </div>
+              </div>
 
-              )
-            )}
+            ))}
 
           </div>
 
@@ -441,10 +505,11 @@ function Hero() {
 
 
 /* =========================================================
-   PROBLEM
+   PROBLEM SECTION
 ========================================================= */
 
 function Problem() {
+
   return (
     <section className="problem">
 
@@ -486,12 +551,18 @@ function Problem() {
 
 
 /* =========================================================
-   SOLUTION
+   SOLUTION SECTION
 ========================================================= */
 
 function Solution() {
+
   return (
     <section className="solution container">
+
+
+      {/* =================================================
+          SOLUTION INTRO
+      ================================================= */}
 
       <div className="solution-intro">
 
@@ -513,6 +584,10 @@ function Solution() {
       </div>
 
 
+      {/* =================================================
+          FOUR SOLUTION CARDS
+      ================================================= */}
+
       <div className="benefits">
 
         {benefits.map(
@@ -530,9 +605,13 @@ function Solution() {
 
               <Icon />
 
-              <h3>{title}</h3>
+              <h3>
+                {title}
+              </h3>
 
-              <p>{desc}</p>
+              <p>
+                {desc}
+              </p>
 
             </article>
 
@@ -547,51 +626,141 @@ function Solution() {
 
 
 /* =========================================================
-   FEATURES
+   NEW CIRCULAR FAMILY FEATURES SECTION
 ========================================================= */
 
 function Features() {
+
   return (
     <section
-      className="features container"
+      className="features family-wheel-section"
       id="features"
     >
 
-      <h2>
-        Everything Your Family Needs,
-        {" "}
-        <em>Organised</em>
-      </h2>
+      <div className="container">
 
 
-      <div className="feature-grid">
+        {/* =================================================
+            SECTION TITLE
+        ================================================= */}
 
-        {features.map(
-          ({
-            name,
-            desc,
-            Icon,
-            color
-          }) => (
+        <h2 className="family-wheel-title">
 
-            <article
-              className="feature"
-              key={name}
-            >
+          Everything Your Family Needs,{" "}
 
-              <Icon
-                color={color}
-                size={28}
-              />
+          <em>
+            Organised
+          </em>
 
-              <h3>{name}</h3>
+        </h2>
 
-              <p>{desc}</p>
 
-            </article>
+        {/* =================================================
+            FAMILY WHEEL
+        ================================================= */}
 
-          )
-        )}
+        <div className="family-wheel">
+
+
+          {/* =================================================
+              CONNECTOR LINES
+
+              These 8 lines connect the center family
+              to the 8 feature circles.
+          ================================================= */}
+
+          <div
+            className="wheel-lines"
+            aria-hidden="true"
+          >
+
+            <span className="wheel-line line-top" />
+
+            <span className="wheel-line line-top-right" />
+
+            <span className="wheel-line line-right" />
+
+            <span className="wheel-line line-bottom-right" />
+
+            <span className="wheel-line line-bottom" />
+
+            <span className="wheel-line line-bottom-left" />
+
+            <span className="wheel-line line-left" />
+
+            <span className="wheel-line line-top-left" />
+
+          </div>
+
+
+          {/* =================================================
+              CENTER FAMILY
+          ================================================= */}
+
+          <div className="wheel-center">
+
+            <div
+              className="wheel-family-glow"
+              aria-hidden="true"
+            />
+
+            <img
+              src={family}
+              alt="FamilyKit family"
+            />
+
+          </div>
+
+
+          {/* =================================================
+              8 CIRCULAR FEATURE ITEMS
+          ================================================= */}
+
+          {features.map((feature, index) => {
+
+            const Icon = feature.Icon;
+
+            return (
+
+              <article
+                key={feature.name}
+                className={
+                  `feature-circle feature-circle-${index + 1}`
+                }
+                style={{
+                  "--feature-color": feature.color,
+                  "--feature-rgb": feature.rgb
+                }}
+              >
+
+                {/* CATEGORY ICON */}
+
+                <Icon
+                  className="feature-circle-icon"
+                  strokeWidth={2.2}
+                />
+
+
+                {/* CATEGORY NAME */}
+
+                <h3>
+                  {feature.name}
+                </h3>
+
+
+                {/* CATEGORY DESCRIPTION */}
+
+                <p>
+                  {feature.desc}
+                </p>
+
+              </article>
+
+            );
+
+          })}
+
+        </div>
 
       </div>
 
@@ -601,10 +770,11 @@ function Features() {
 
 
 /* =========================================================
-   HOW IT WORKS
+   HOW FAMILYKIT WORKS
 ========================================================= */
 
 function How() {
+
   return (
     <section
       className="how"
@@ -612,6 +782,11 @@ function How() {
     >
 
       <div className="container how-inner">
+
+
+        {/* =================================================
+            INTRO
+        ================================================= */}
 
         <div className="how-intro">
 
@@ -627,6 +802,10 @@ function How() {
         </div>
 
 
+        {/* =================================================
+            STEPS
+        ================================================= */}
+
         <div className="steps">
 
           {steps.map(
@@ -638,10 +817,15 @@ function How() {
 
               <React.Fragment key={title}>
 
+
+                {/* STEP */}
+
                 <article className="step">
 
                   <span className="step-icon">
+
                     <Icon />
+
                   </span>
 
 
@@ -664,8 +848,12 @@ function How() {
                 </article>
 
 
+                {/* ARROW BETWEEN STEPS */}
+
                 {i < steps.length - 1 && (
+
                   <ArrowRight className="step-arrow" />
+
                 )}
 
               </React.Fragment>
@@ -683,7 +871,7 @@ function How() {
 
 
 /* =========================================================
-   DASHBOARD
+   FAMILY DASHBOARD
 ========================================================= */
 
 function Dashboard() {
@@ -695,10 +883,16 @@ function Dashboard() {
     "Works across mobile and web"
   ];
 
+
   return (
     <section className="dashboard">
 
       <div className="container dashboard-grid">
+
+
+        {/* =================================================
+            DASHBOARD IMAGE
+        ================================================= */}
 
         <div className="dashboard-image">
 
@@ -709,6 +903,10 @@ function Dashboard() {
 
         </div>
 
+
+        {/* =================================================
+            DASHBOARD TEXT
+        ================================================= */}
 
         <div className="dashboard-copy">
 
@@ -729,6 +927,10 @@ function Dashboard() {
             so you always know what’s next.
           </p>
 
+
+          {/* =================================================
+              CHECK LIST
+          ================================================= */}
 
           <ul className="check-list">
 
@@ -756,7 +958,7 @@ function Dashboard() {
 
 
 /* =========================================================
-   EXTRAS
+   SMART REMINDERS + UTILITIES
 ========================================================= */
 
 function Extras() {
@@ -808,12 +1010,19 @@ function Extras() {
           key={card.title}
         >
 
+
+          {/* =================================================
+              TEXT SIDE
+          ================================================= */}
+
           <div className="extra-text">
 
             <span
               className={`extra-icon ${card.iconClass}`}
             >
+
               <card.Icon />
+
             </span>
 
 
@@ -828,21 +1037,21 @@ function Extras() {
               </p>
 
 
+              {/* CHECK LIST */}
+
               <ul className="check-list">
 
-                {card.items.map(
-                  (item) => (
+                {card.items.map((item) => (
 
-                    <li key={item}>
+                  <li key={item}>
 
-                      <CheckCircle2 />
+                    <CheckCircle2 />
 
-                      {item}
+                    {item}
 
-                    </li>
+                  </li>
 
-                  )
-                )}
+                ))}
 
               </ul>
 
@@ -850,6 +1059,10 @@ function Extras() {
 
           </div>
 
+
+          {/* =================================================
+              CARD IMAGE
+          ================================================= */}
 
           <img
             src={card.image}
@@ -907,6 +1120,11 @@ function Security() {
 
       <div className="container security-inner">
 
+
+        {/* =================================================
+            SECURITY TITLE
+        ================================================= */}
+
         <div className="security-title">
 
           <ShieldCheck size={48} />
@@ -919,6 +1137,10 @@ function Security() {
 
         </div>
 
+
+        {/* =================================================
+            SECURITY ITEMS
+        ================================================= */}
 
         <div className="security-items">
 
@@ -971,6 +1193,11 @@ function FAQ() {
       id="faqs"
     >
 
+
+      {/* =================================================
+          FAQ INTRO
+      ================================================= */}
+
       <div>
 
         <h2>
@@ -985,6 +1212,10 @@ function FAQ() {
 
       </div>
 
+
+      {/* =================================================
+          FAQ QUESTIONS
+      ================================================= */}
 
       <div className="faq-items">
 
@@ -1021,9 +1252,11 @@ function FAQ() {
 
 
               {active === i && (
+
                 <p>
                   {answer}
                 </p>
+
               )}
 
             </article>
@@ -1039,13 +1272,18 @@ function FAQ() {
 
 
 /* =========================================================
-   FOOTER + CTA
+   CTA + FOOTER
 ========================================================= */
 
 function Footer() {
 
   return (
     <>
+
+
+      {/* =================================================
+          EARLY ACCESS CTA
+      ================================================= */}
 
       <section
         className="cta container"
@@ -1089,7 +1327,14 @@ function Footer() {
       </section>
 
 
+      {/* =================================================
+          FOOTER
+      ================================================= */}
+
       <footer className="footer container">
+
+
+        {/* BRAND */}
 
         <div className="footer-brand">
 
@@ -1101,6 +1346,8 @@ function Footer() {
 
         </div>
 
+
+        {/* LINKS */}
 
         <div className="footer-links">
 
@@ -1123,6 +1370,8 @@ function Footer() {
         </div>
 
 
+        {/* SOCIAL */}
+
         <div className="social">
 
           <Youtube />
@@ -1141,7 +1390,7 @@ function Footer() {
 
 
 /* =========================================================
-   MAIN APPLICATION
+   MAIN APP
 ========================================================= */
 
 export default function App() {
@@ -1151,26 +1400,46 @@ export default function App() {
 
       <Header />
 
+
       <main>
 
+        {/* HERO */}
         <Hero />
 
+
+        {/* PROBLEM */}
         <Problem />
 
+
+        {/* SOLUTION / FOUR CARDS */}
         <Solution />
 
+
+        {/* NEW CIRCULAR FEATURE SECTION */}
         <Features />
 
+
+        {/* HOW IT WORKS */}
         <How />
 
+
+        {/* DASHBOARD */}
         <Dashboard />
 
+
+        {/* REMINDERS + UTILITIES */}
         <Extras />
 
+
+        {/* SECURITY */}
         <Security />
 
+
+        {/* FAQ */}
         <FAQ />
 
+
+        {/* CTA + FOOTER */}
         <Footer />
 
       </main>
