@@ -3355,3 +3355,161 @@ em {
   background: #FDFF94;
   border-radius: 50%;
 }
+
+
+/* =========================================================
+   FINAL CENTRAL FAMILY WHEEL TREATMENT
+   Yellow background behind the existing center image.
+   No JSX or asset replacement required.
+========================================================= */
+
+.wheel-center {
+  background: #FDFF94;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wheel-family-glow {
+  background: #FDFF94;
+  border-radius: 50%;
+}
+
+.wheel-center img {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 700px) {
+  .wheel-center {
+    width: 135px;
+    height: 135px;
+    background: #FDFF94;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .wheel-family-glow {
+    width: 135px;
+    height: 135px;
+    background: #FDFF94;
+    border-radius: 50%;
+  }
+
+  .wheel-center img {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+  }
+}
+
+@media (max-width: 380px) {
+  .wheel-center {
+    width: 125px;
+    height: 125px;
+    background: #FDFF94;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .wheel-family-glow {
+    width: 125px;
+    height: 125px;
+    background: #FDFF94;
+    border-radius: 50%;
+  }
+
+  .wheel-center img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+  }
+}
+
+
+/* =========================================================
+   FINAL CENTER WHEEL PALETTE
+   Matches Organize / Get Insights cards.
+========================================================= */
+.wheel-center {
+  background: rgba(253, 255, 148, 0.20);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wheel-family-glow {
+  background: rgba(253, 255, 148, 0.20);
+  border-radius: 50%;
+}
+.wheel-center img {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  mix-blend-mode: multiply;
+}
+@media (max-width: 700px) {
+  .wheel-center,
+  .wheel-family-glow {
+    background: rgba(253, 255, 148, 0.20);
+  }
+}
+@media (max-width: 380px) {
+  .wheel-center,
+  .wheel-family-glow {
+    background: rgba(253, 255, 148, 0.20);
+  }
+}
+
+
+/* =========================================================
+   8 FEATURE CIRCLE PNG ICONS
+   ADDED ONLY — ALL PREVIOUS CSS ABOVE IS UNCHANGED
+========================================================= */
+
+/* Desktop */
+.feature-circle-image {
+  width: 31px;
+  height: 31px;
+
+  object-fit: contain;
+  object-position: center;
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  flex-shrink: 0;
+
+  transition: transform 0.28s ease;
+}
+
+/* Same hover scale previously used by the Lucide icons */
+@media (hover: hover) {
+  .feature-circle:hover .feature-circle-image {
+    transform: scale(1.08);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .feature-circle-image {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 4px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .feature-circle-image {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 3px;
+  }
+}

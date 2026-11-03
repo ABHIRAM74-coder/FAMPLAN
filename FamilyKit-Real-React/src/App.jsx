@@ -47,6 +47,15 @@ import utilities from "./assets/utilities.png";
 */
 import documentsImage from "./assets/Documents.jpeg";
 
+import householdIcon from "./assets/Household & Bills.png";
+import healthIcon from "./assets/health.png";
+import documentsIcon from "./assets/File.png";
+import educationIcon from "./assets/Education.png";
+import propertyIcon from "./assets/Housing.png";
+import insuranceIcon from "./assets/Insurance.png";
+import todoIcon from "./assets/To do Lists.png";
+import financeIcon from "./assets/Vector.png";
+
 
 /* =========================================================
    FEATURE DATA
@@ -56,56 +65,56 @@ const features = [
   {
     name: "Documents",
     desc: "IDs, certificates and records",
-    Icon: FileText,
+    image: documentsIcon,
     color: "#2882C6",
     rgb: "40, 130, 198"
   },
   {
     name: "Insurance",
     desc: "Policies, renewals and claims",
-    Icon: ShieldCheck,
+    image: insuranceIcon,
     color: "#13A699",
     rgb: "19, 166, 153"
   },
   {
     name: "Finance",
     desc: "Loans, EMIs & Investments",
-    Icon: Coins,
+    image: financeIcon,
     color: "#283DC6",
     rgb: "40, 61, 198"
   },
   {
     name: "Property",
     desc: "Home, Vehicles & Valuables",
-    Icon: House,
+    image: propertyIcon,
     color: "#9E28C6",
     rgb: "158, 40, 198"
   },
   {
     name: "Health",
     desc: "Records & Prescriptions",
-    Icon: HeartPulse,
+    image: healthIcon,
     color: "#C62882",
     rgb: "198, 40, 130"
   },
   {
     name: "Household",
     desc: "Bills & Service Contracts",
-    Icon: ShoppingBasket,
+    image: householdIcon,
     color: "#B89C10",
     rgb: "184, 156, 16"
   },
   {
     name: "Education",
     desc: "School & Learning records",
-    Icon: GraduationCap,
+    image: educationIcon,
     color: "#35BC16",
     rgb: "53, 188, 22"
   },
   {
     name: "To do Lists",
     desc: "Shared to-do's and responsibilities",
-    Icon: ClipboardCheck,
+    image: todoIcon,
     color: "#6528C6",
     rgb: "101, 40, 198"
   }
@@ -720,8 +729,6 @@ function Features() {
 
           {features.map((feature, index) => {
 
-            const Icon = feature.Icon;
-
             return (
 
               <article
@@ -735,9 +742,11 @@ function Features() {
                 }}
               >
 
-                <Icon
-                  className="feature-circle-icon"
-                  strokeWidth={3}
+                <img
+                  src={feature.image}
+                  alt=""
+                  className="feature-circle-image"
+                  aria-hidden="true"
                 />
 
                 <h3>
