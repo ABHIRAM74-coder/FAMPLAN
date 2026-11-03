@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap");
 
 
 /* =========================================================
@@ -6,7 +6,7 @@
 ========================================================= */
 
 :root {
-  font-family: "Inter", Arial, sans-serif;
+   font-family: "Mulish", Arial, sans-serif;
   color: #110d29;
   background: #FDFCFF;
 }
@@ -50,6 +50,20 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+
+
+
+
 
 h1,
 h2,
